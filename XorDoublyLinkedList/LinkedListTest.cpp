@@ -41,10 +41,10 @@ int main() {
 	list.moveToPos(100);
 	cout << "The value at " << list.getPos() << " was " << list.remove() << "; after removing this value, the length is now " << list.length() << " and the value at " << list.getPos() << " is " << list.getVal() << "\n";
 
-	cout << "Testing freelist...";
+	cout << "Testing freelist... \n";
 	list.moveToEnd();
 	list.insert(2201);
-	cout << "List value at end is " << list.getVal() << ", which should be in a space that used to be on the freelist.";
+	cout << "List value at end is " << list.getVal() << ", which should be in a space that used to be on the freelist. \n";
 
 	list.clear();
 	cout << "List should be cleared: " << list.length() << "\n";

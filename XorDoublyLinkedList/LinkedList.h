@@ -104,7 +104,7 @@ public:
 	// Move to tail of list
 	void moveToEnd() {
 		currLink = tail->getPrev(Link<E>::nullLink);
-		prevLink = currLink->getPrev(Link<E>::nullLink);
+		prevLink = currLink->getPrev(tail);
 	}
 
 	// Move to previous link
