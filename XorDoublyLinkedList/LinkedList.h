@@ -20,16 +20,18 @@ private:
 	Link<E>* prevLink;
 	int size;
 
+	// Initialize list with separate head and tail (head <-> tail)
 	void init() {
 		head = new Link<E>;
 		tail = new Link<E>;
 		head->setNext(Link<E>::nullLink, tail);
 		tail->setPrev(Link<E>::nullLink, head);
 		currLink = head;
-		prevLink = head->getPrev(tail);
+		prevLink = head->getPrev(tail);	// For consistency - should always be nullLink
 		size = 0;
 	}
 
+	// Remove all links from list
 	void removeall() {
 		prevLink = Link<E>::nullLink;
 		while(head != Link<E>::nullLink) {
@@ -41,6 +43,7 @@ private:
 	}
 
 public:
+	// Constructor
 	LinkedList(int size = 0) {
 		init();
 	}
